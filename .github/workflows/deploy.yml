@@ -62,7 +62,7 @@ jobs:
         run: |
           cd springboot-app && ./mvnw package  && mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
-            - name: Build and push Quarkus Java image to registry
+      - name: Build and push Quarkus Java image to registry
         uses: docker/build-push-action@v4
         with:
           push: true
